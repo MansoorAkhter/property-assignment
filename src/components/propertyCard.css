@@ -1,10 +1,3 @@
-.propertyCard {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 20px;
-}
 .propertyText {
   padding: 10px;
 }
@@ -20,17 +13,35 @@ h6 {
   font-weight: 400;
 }
 .listed {
-  font-size: 13px;
+  font-size: 15px;
   color: gray;
 }
 
-.propertyComp:hover{
-  box-shadow: -1px 1px 40px -7px rgba(0,0,0,0.74);
--webkit-box-shadow: -1px 1px 40px -7px rgba(0,0,0,0.74);
+.heart {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 
-width: 33%;
--webkit-transition: all 0.3s 0s ease;
--moz-transition: all 0.3s 0s ease;
--o-transition: all 0.3s 0s ease;
-transition: all 0.3s 0s ease;
+.propertyComp {
+  position: relative;
+}
+
+.propertyComp:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: -1px 1px 40px -7px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: -1px 1px 40px -7px rgba(0, 0, 0, 0.74);
+
+  -webkit-transition: all 0.2s 0s ease;
+  -moz-transition: all 0.2s 0s ease;
+  -o-transition: all 0.2s 0s ease;
+  transition: all 0.2s 0s ease;
+}
+
+
+.propertyImg {
+  width: 100%;
+  height: 60%;
+  border-radius: 5px;
 }

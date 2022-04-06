@@ -1,12 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import './bootstrap';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import SingleBuilding from 'components/SingleBuilding';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+
+        </Route>
+        <Route path="/singleBuilding/:buildingId" element={<SingleBuilding />}>
+
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root'),
 );

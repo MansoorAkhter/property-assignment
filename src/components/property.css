@@ -5,25 +5,62 @@ h4 {
   box-sizing: border-box;
 }
 
+.propertyCard {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 50px 0;
+  position: relative;
+}
+
 .propertyMain {
   display: flex;
   justify-content: center;
-  flex-direction: row;
   background-color: lightgray;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  background-color: rgb(239, 239, 239);
+  height: 75px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  box-shadow: 1px 3px 13px 0px rgba(0, 0, 0, 0.57);
+  -webkit-box-shadow: 1px 3px 13px 0px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 1px 3px 13px 0px rgba(0, 0, 0, 0.57);
+}
+.navbarLogo {
+  width: 95px;
+  cursor: pointer;
+}
+h2 {
+  font-weight: 700;
+  cursor: pointer;
+}
+h4 {
+  font-weight: 500;
 }
 .propertyWrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   background-color: #fff;
+  border-radius: 5px;
   width: 80vw;
   overflow: hidden;
+  margin: 150px 0 50px 0;
+  padding: 0 0 40px 0;
 }
 .propertyTopbar {
   display: flex;
   background-color: rgb(239, 239, 239);
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding: 10px 35px;
 }
 .propertyTopbar > h4 {
@@ -34,8 +71,4 @@ h4 {
   background-color: rgb(239, 239, 239);
   border-radius: 5px;
 }
-.propertyImg {
-  /* height: 50%; */
-  width: 100%;
-  border-radius: 5px;
-}
+
