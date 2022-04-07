@@ -40,7 +40,7 @@ function Property(props) {
           </div>
           <div className="propertyCard">
             {property.map((item, index) => (
-                <ProperytCard detail={item} key={index} indexNumber={index} />
+              <ProperytCard detail={item} key={index} indexNumber={index} />
             ))}
           </div>
         </div>

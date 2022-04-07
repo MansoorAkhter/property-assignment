@@ -4,14 +4,16 @@ import './propertyCard.css';
 
 function ProperytCard({ detail, indexNumber }) {
   console.log('key==>>>', indexNumber);
-  console.log(indexNumber,"==>>>",localStorage.getItem(indexNumber))
+  console.log(indexNumber, "==>>>", localStorage.getItem(indexNumber))
+
+
   const [heart, setHeart] = useState(JSON.parse(localStorage.getItem(indexNumber)));
   console.log(heart);
 
   const navigation = useNavigate();
 
   useEffect(() => {
-    console.log(indexNumber, "==>>>",localStorage.getItem(indexNumber));
+    console.log(indexNumber, "==>>>", localStorage.getItem(indexNumber));
   }, [heart]);
 
   const heartStorageHandler = () => {
@@ -24,21 +26,23 @@ function ProperytCard({ detail, indexNumber }) {
     console.log('page clicked==>>', indexNumber);
     navigation(`/singleBuilding/${detail?.mlsId}`, {
       state: {
-        indexNumber : indexNumber
+        indexNumber: indexNumber
       }
     });
   };
 
   console.log('detail===>>>', detail);
+
+
   return (
-    <div className="propertyComp" onClick={pageNavigation}>
+    <div className="propertyComp" >
       <img
         className="heart"
         src={heart ? 'images/heart-fill.svg' : 'images/heart-stroke.svg'}
         onClick={heartStorageHandler}
       />
-      <img className="propertyImg" src={detail?.photos[0]} alt="" />
-      <div className="propertyText">
+      <img className="propertyImg" src={detail?.photos[0]} alt="" onClick={pageNavigation}/>
+      <div className="propertyText" onClick={pageNavigation}>
         <h5>
           {detail?.property?.bedrooms} BR | {detail?.property?.bathsFull}
           {detail?.property?.bathsHalf} Bath | {detail?.property?.area} Sq Ft
